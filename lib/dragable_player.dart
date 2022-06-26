@@ -1,4 +1,5 @@
 import 'package:dpro_flame/player.dart';
+import 'package:dpro_flame/points.dart';
 import 'package:flame/components.dart';
 import 'package:flame/effects.dart';
 import 'package:flame/game.dart';
@@ -47,7 +48,7 @@ class DraggablePlayer extends Player with Draggable {
   bool onDragEnd(_) {
     dragDeltaPosition = null;
     add(MoveEffect.to(
-      Vector2.zero(),
+      Points.caculateClosestPoint(position) ?? Vector2.zero(),
       EffectController(duration: 0.25),
     ));
     return false;
