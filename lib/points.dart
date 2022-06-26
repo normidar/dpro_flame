@@ -2,20 +2,25 @@ import 'package:flame/extensions.dart';
 import 'package:flutter/material.dart';
 
 class Points {
-  static final points = [
+  static var points = {
     Vector2(50, 10),
     Vector2(10, 50),
-  ];
-  static Vector2? caculateClosestPoint(Vector2 locate) {
+  };
+  static Vector2? caculateClosestPoint(
+      Vector2 locate, Vector2 nextPointRelaive) {
     double minimumDistance = double.infinity;
     Vector2? closestPoint;
-    for (int i = 0; i < points.length; i++) {
-      final distance = points[i].distanceTo(locate);
+    for (var e in points) {
+      final distance = e.distanceTo(locate);
       if (distance < minimumDistance) {
-        closestPoint = points[i];
+        closestPoint = e;
         minimumDistance = distance;
       }
     }
+    if (closestPoint != null) {
+      points.add(closestPoint + nextPointRelaive);
+    }
+    print(points.length);
     return closestPoint;
   }
 }

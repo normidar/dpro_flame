@@ -48,7 +48,8 @@ class DraggablePlayer extends Player with Draggable {
   bool onDragEnd(_) {
     dragDeltaPosition = null;
     add(MoveEffect.to(
-      Points.caculateClosestPoint(position) ?? Vector2.zero(),
+      Points.caculateClosestPoint(position, Vector2(0, height)) ??
+          Vector2.zero(),
       EffectController(duration: 0.25),
     ));
     return false;
