@@ -21,7 +21,7 @@ class DproGame extends FlameGame with HasDraggables {
   Future<void>? onLoad() async {
     await super.onLoad();
 
-    add(BottomElementBar(size));
+    add(BottomElementBar()..size = Vector2(size.x, size.y/3)..position = Vector2(0,size.y*2/3));
     add(
       DraggablePlayer(text: "Text Super")..position = Vector2.zero(),
     );
