@@ -14,7 +14,7 @@ class AimCross extends PositionComponent {
     _paint.color = Colors.red;
     _paint.strokeWidth = 1.8;
     const double length = 5;
-    canvas.drawLine(Offset.zero, Offset(-length, 0), _paint);
+    canvas.drawLine(Offset.zero, const Offset(-length, 0), _paint);
     canvas.drawLine(Offset.zero, const Offset(0, -length), _paint);
     canvas.drawLine(Offset.zero, const Offset(length, 0), _paint);
     canvas.drawLine(Offset.zero, const Offset(0, length), _paint);
