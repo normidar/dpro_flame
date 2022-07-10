@@ -1,3 +1,4 @@
+import 'package:dpro_flame/aim_cross.dart';
 import 'package:dpro_flame/dragable_player.dart';
 import 'package:flame/flame.dart';
 import 'package:flame/game.dart';
@@ -21,5 +22,6 @@ class DproGame extends FlameGame with HasDraggables {
     add(
       DraggablePlayer(text: "Text Super")..position = Vector2.zero(),
     );
+    // add(AimCross()..position = Vector2(20, 20));
   }
 }

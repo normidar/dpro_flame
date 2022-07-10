@@ -28,7 +28,7 @@ environment:
 # versions available, run `flutter pub outdated`.
 dependencies:
   flame: ^1.2.0
-  dpro: ^0.5.0
+  dpro: ^0.5.1
   flutter:
     sdk: flutter
 
