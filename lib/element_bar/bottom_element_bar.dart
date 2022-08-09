@@ -3,7 +3,6 @@ import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 
 class BottomElementBar extends PositionComponent {
-
   @override
   Future<void> onLoad() async {
     await super.onLoad();
@@ -15,7 +14,7 @@ class BottomElementBar extends PositionComponent {
   final Paint _paint = Paint();
   @override
   void render(Canvas canvas) {
-    _paint.color = Color.fromARGB(255, 183, 182, 182);
+    _paint.color = Color.fromARGB(255, 237, 129, 129);
     _paint.strokeWidth = 1.8;
     canvas.drawRect(Rect.fromLTWH(0, 0, size.x, size.y), _paint);
   }
